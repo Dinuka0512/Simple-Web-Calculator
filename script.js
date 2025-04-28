@@ -20,14 +20,70 @@ function num1(){
     }
 }
 
-function num2(){}
-function num3(){}
-function num4(){}
-function num5(){}
-function num6(){}
-function num7(){}
-function num8(){}
-function num9(){}
+function num2(){
+    if(parseFloat(area.value) == 0){
+        area.value = 2;
+    }else{
+        area.value += 2;
+    }
+}
+
+function num3(){
+    if(parseFloat(area.value) == 0){
+        area.value = 3;
+    }else{
+        area.value += 3;
+    }
+}
+
+function num4(){
+    if(parseFloat(area.value) == 0){
+        area.value = 4;
+    }else{
+        area.value += 4;
+    }
+}
+
+function num5(){
+    if(parseFloat(area.value) == 0){
+        area.value = 5;
+    }else{
+        area.value += 5;
+    }
+}
+
+function num6(){
+    if(parseFloat(area.value) == 0){
+        area.value = 6;
+    }else{
+        area.value += 6;
+    }
+}
+
+function num7(){
+    if(parseFloat(area.value) == 0){
+        area.value = 7;
+    }else{
+        area.value += 7;
+    }
+}
+
+function num8(){
+    if(parseFloat(area.value) == 0){
+        area.value = 8;
+    }else{
+        area.value += 8;
+    }
+}
+
+function num9(){
+    if(parseFloat(area.value) == 0){
+        area.value = 9;
+    }else{
+        area.value += 9;
+    }
+}
+
 
 function equal(){}
 function dotted(){}

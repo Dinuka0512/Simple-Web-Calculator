@@ -31,6 +31,8 @@ body{
     height: 60px;
     padding: 5px 15px;
 
+    text-align: end;
+
     position: relative;
     left: 0;
     right: 0;
