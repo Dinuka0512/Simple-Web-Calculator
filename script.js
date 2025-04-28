@@ -1,97 +1,106 @@
 let area =  document.getElementById("area");
 area.value = 0;
 
+let frisNum;
+let secondnumb;
+let operation;
+let result;
+
 // ONCLICK ACTIONS
-function num0(){
-    if(parseFloat(area.value) != 0){
-        //ex - 1221  + 0 = 12210 
-        area.value += 0;
-    }else{
-        //ex - 0 = 0
-        area.value = 0;
+// ONCLICK ACTIONS
+function addNumber(num){
+    if (parseFloat(area.value) === 0 || isNaN(parseFloat(area.value))) {
+        area.value = num;
+    } else {
+        area.value += num;
     }
 }
 
-function num1(){
-    if(parseFloat(area.value) == 0){
-        area.value = 1;
-    }else{
-        area.value += 1;
+function num0() { addNumber(0); }
+function num1() { addNumber(1); }
+function num2() { addNumber(2); }
+function num3() { addNumber(3); }
+function num4() { addNumber(4); }
+function num5() { addNumber(5); }
+function num6() { addNumber(6); }
+function num7() { addNumber(7); }
+function num8() { addNumber(8); }
+function num9() { addNumber(9); }
+
+
+
+function equal(){
+    secondnumb = area.value;
+
+    switch(operation){
+        case "+" :
+            result = parseFloat(frisNum) + parseFloat(secondnumb);
+            break;
+
+        case "-" :
+            result = parseFloat(frisNum) - parseFloat(secondnumb);
+            break;
+
+        case "/" :
+            result = parseFloat(frisNum) / parseFloat(secondnumb);
+            break;
+
+        case "*" :
+            result = parseFloat(frisNum) * parseFloat(secondnumb);
+            break;
+
+        default :
+            alert("invalid Syntax");
+            result = "INVALID SYNTAX";
     }
+
+    area.value = result;
 }
 
-function num2(){
-    if(parseFloat(area.value) == 0){
-        area.value = 2;
-    }else{
-        area.value += 2;
-    }
-}
-
-function num3(){
-    if(parseFloat(area.value) == 0){
-        area.value = 3;
-    }else{
-        area.value += 3;
-    }
-}
-
-function num4(){
-    if(parseFloat(area.value) == 0){
-        area.value = 4;
-    }else{
-        area.value += 4;
-    }
-}
-
-function num5(){
-    if(parseFloat(area.value) == 0){
-        area.value = 5;
-    }else{
-        area.value += 5;
-    }
-}
-
-function num6(){
-    if(parseFloat(area.value) == 0){
-        area.value = 6;
-    }else{
-        area.value += 6;
-    }
-}
-
-function num7(){
-    if(parseFloat(area.value) == 0){
-        area.value = 7;
-    }else{
-        area.value += 7;
-    }
-}
-
-function num8(){
-    if(parseFloat(area.value) == 0){
-        area.value = 8;
-    }else{
-        area.value += 8;
-    }
-}
-
-function num9(){
-    if(parseFloat(area.value) == 0){
-        area.value = 9;
-    }else{
-        area.value += 9;
-    }
-}
-
-
-function equal(){}
 function dotted(){}
 
-function ac(){}
-function c(){}
+function ac(){
+    area.value = 0;
+    frisNum = null;
+    secondnumb = null;
+    operation = null;
+}
 
-function opPlus(){}
-function opMinus(){}
-function opDivition(){}
-function opMulti(){}
+function c(){
+    if(area.value != null || area.value != ""){
+        // IF NOT NULL THE VALUE 
+        area.value = (area.value).slice(0,-1);
+    }
+}
+
+function opPlus(){
+    frisNum = area.value;
+
+    //HERE CLEAR THE TEXTS
+    area.value = 0;
+    operation = "+";
+}
+
+function opMinus(){
+    frisNum = area.value;
+
+    //HERE CLEAR THE TEXTS
+    area.value = 0;
+    operation = "-";
+}
+
+function opDivition(){
+    frisNum = area.value;
+
+    //HERE CLEAR THE TEXTS
+    area.value = 0;
+    operation = "/";
+}
+
+function opMulti(){
+    frisNum = area.value;
+
+    //HERE CLEAR THE TEXTS
+    area.value = 0;
+    operation = "*";
+}
