@@ -24,3 +24,5 @@ A basic calculator built using HTML, CSS, and JavaScript. This calculator can pe
 1. Download or clone the repository.
 2. Open `https://simple-web-calculator-alpha.vercel.app/` in your browser.
 3. Start using the calculator!
+
+![image](https://github.com/user-attachments/assets/52015c67-2b5d-4ef6-b945-2424c53a8304)
